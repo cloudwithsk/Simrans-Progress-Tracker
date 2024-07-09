@@ -1,0 +1,187 @@
+/* General styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*background-color: #9b59b6; /* Default light mode background */
+    color: #333333; /* Default text color */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for mode change */
+    background: linear-gradient(to bottom, #d3a9e3, #f9c0c8); /* Pastel purple to pastel pink */
+    background: linear-gradient(to right, #d3a9e3, #f9c0c8); /* Pastel purple to pastel pink */
+    
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 50); /* Translucent white background */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    position: relative; /* Ensure relative position for absolute elements */
+}
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Roboto Mono", monospace;
+    color: #41444B;
+}
+
+/* Navigation menu */
+.navigation {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.navigation li {
+    margin: 0 10px;
+}
+.navigation li a {
+    text-decoration: none;
+    padding: 12px 24px; /* Adjusted padding for larger buttons */
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+}
+.navigation li a.progress-tracker {
+    background-color: #9b59b6; /* Purple */
+}
+.navigation li a.daily-logs {
+    background-color: #e91e63; /* Pink */
+}
+.navigation li a.lined-page {
+    background-color: #3498db; /* Sky blue */
+}
+.navigation li a.new-button {
+    padding: 12px 24px; /* Adjust padding as needed */
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green */
+    color: #fff;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.navigation li a.new-button:hover {
+    opacity: 0.8;
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.navigation li a:hover {
+    opacity: 0.8;
+}
+
+/* Zoom buttons */
+.zoom-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.zoom-buttons button {
+    padding: 6px; /* Adjusted padding for smaller buttons */
+    margin: 0 5px; /* Adjusted margin for smaller spacing */
+    border-radius: 50%; /* Round button shape */
+    background-color: #ffd966; /* Pastel yellow */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 30px; /* Adjusted width for smaller size */
+    height: 30px; /* Adjusted height for smaller size */
+    font-size: 18px; /* Adjusted font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-side-buttons {
+    position: fixed;
+    top: 21%; /* Adjust top position as needed */
+    right: 40px; /* Adjust right position as needed */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.right-side-buttons .external-link-button {
+    margin-bottom: 5px; /* Adjust the margin-bottom to reduce the distance */
+    text-decoration: none;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.right-side-buttons .external-link-button img {
+    width: 65px; /* Adjust image width */
+    height: 65px; /* Adjust image height */
+    vertical-align: middle; /* Align image vertically */
+}
+
+.right-side-buttons .external-link-button span {
+    display: none; /* Hide text initially */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: -60px; /* Position to the left of the button */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: #fff;
+    padding: 5px; /* Adjusted padding */
+    border-radius: 5px;
+    font-size: 10px; /* Small font size */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.right-side-buttons .external-link-button:hover span {
+    display: inline-block; /* Show text on hover */
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+}
+.dark-mode-toggle button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.dark-mode-toggle button i {
+    font-size: 24px;
+    color: #333333; /* Default icon color */
+    transition: color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333333; /* Dark mode background */
+    color: #ffffff; /* Dark mode text color */
+}
+body.dark-mode .dark-mode-toggle button i {
+    color: #ffffff; /* Dark mode icon color */
+}
+
+/* Responsive iframe container */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio 16:9 for responsive iframe */
+}
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

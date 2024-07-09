@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simran's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/bunny-pink.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-LM3d4x4OaVQ3N8Exv2Vl6Yy3CgF4g4vX26P/3H0GJGKU7aA6kDlRETr6Ib+R/FbBl3bJ8P5S8a2SV6/4sD1ikg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>My Progress Tracker</h1>
+
+        <!-- Navigation menu -->
+        <div class="navigation">
+            <ul>
+                <li><a href="#" class="progress-tracker" onclick="switchToSheet('progress')">Progress Tracker</a></li>
+                <li><a href="#" class="daily-logs" onclick="switchToSheet('logs')">Daily Logs</a></li>
+                <li><a href="lined-page.html" class="lined-page" target="_blank">Write</a></li>
+                <li><a href="#" class="new-button" onclick="newFunction()">New Button</a></li>
+            </ul>
+        </div>
+
+        <!-- Zoom buttons -->
+        <div class="zoom-buttons">
+            <button onclick="zoomIn()">+</button>
+            <button onclick="zoomOut()">-</button>
+        </div>
+
+        <!-- Right-side buttons with image icons -->
+        <div class="right-side-buttons">
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="external-link-button" target="_blank">
+                <img src="icons/gmail.svg" alt="Gmail Icon">
+                <span>Gmail</span>
+            </a>
+             <a href="https://learn.upgrad.com/courses" class="external-link-button" target="_blank">
+                <img src="icons/book.png" alt="Book Icon">
+                <span>Course Upgrad</span>
+            </a>
+            <a href="https://pomodorotimer.online/" class="external-link-button" target="_blank">
+                <img src="icons/clock.png" alt="Pomo Icon">
+                <span>Pomo</span>
+            </a>
+            <a href="https://youtube.com/" class="external-link-button" target="_blank">
+                <img src="icons/yt.png" alt="YouTube Icon">
+                <span>YouTube</span>
+            </a>
+        </div>
+
+
+
+        <!-- Responsive iframe container -->
+        <div class="iframe-container">
+            <iframe id="sheetFrame" width="100%" height="100%" src="https://docs.google.com/spreadsheets/d/1cTt73P8b-7Gr7FpbSneXxbzIOlQwGRqZbuNoD8FN1yo/edit?usp=sharing&rm=minimal&headers=false"></iframe>
+        </div>
+
+        <p>Make sure the Google Sheets are published to the web and have editing permissions enabled for anyone with the link.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
